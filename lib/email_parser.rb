@@ -11,5 +11,7 @@ class EmailParser
     @emails=emails
   end
   attr_accessor :emails
-  def 
+  def parse
+    @emails
+  end
 end

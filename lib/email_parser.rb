@@ -10,7 +10,7 @@ class EmailParser
     emails_initial=neolist.split(",")
     emails = []
     emails_initial.each do |mail|
-      if mail.length>4
+      if mail.length>4 && !emails.include?(mail)
         emails << mail
       end
     end

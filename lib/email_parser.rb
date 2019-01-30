@@ -7,7 +7,13 @@ class EmailParser
   def initialize(stuff)
     intermediate=stuff.split(" ")
     neolist=intermediate.join(",")
-    emails=neolist.split(",")
+    emails_initial=neolist.split(",")
+    emails = []
+    emails_initial.each do |mail|
+      if mail.length>4
+        emails << mail
+      end
+    end
     @emails=emails
   end
   attr_accessor :emails
